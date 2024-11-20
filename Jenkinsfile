@@ -14,10 +14,10 @@ pipeline {
 			}
             steps {
                 script {
-				    app = docker.build("nithinmlr\trainSchedule")
-					app.inside {
-					    sh 'echo $(curl localhost:8080)
-					}	
+			app = docker.build("nithinmlr\trainSchedule")
+			app.inside {
+			   sh 'echo $(curl localhost:8080)
+			}	
 
             }
         }
