@@ -8,11 +8,11 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
-		stage('Build docker image') {
+	 stage('Build docker image') {
 		    when {
 			    branch 'master'
 			}
-            steps {
+              steps {
                 script {
 			app = docker.build("nithinmlr\trainSchedule")
 			app.inside {
